@@ -22,7 +22,7 @@ namespace ProtoBasket.Common.Model
         /// Category
         /// ex) Soccer, Baseball
         /// </summary>
-        public string Category { get; set; }
+        public eMatchCategory Category { get; set; }
         /// <summary>
         /// Home Team Name
         /// </summary>

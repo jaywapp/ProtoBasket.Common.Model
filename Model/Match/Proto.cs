@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ProtoBasket.Common.Model.Model
+namespace ProtoBasket.Common.Model
 {
     /// <summary>
     /// Proto 

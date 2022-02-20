@@ -6,7 +6,7 @@
         /// <summary>
         /// Handicap Value
         /// </summary>
-        public double Handicap { get; set; } = 0;
+        public double? Handicap { get; set; } = 0;
         #endregion
 
         #region Functions
@@ -18,7 +18,13 @@
         }
 
         /// <inheritdoc/>
-        public override eMatchResult GetResult() => Score?.GetHandicapResult(Handicap) ?? eMatchResult.Invalid;
+        public override eMatchResult GetResult()
+        {
+            if (Score == null || !Handicap.HasValue)
+                return eMatchResult.Invalid;
+
+            return Score.GetHandicapResult(Handicap.Value);
+        }
         #endregion
     }
 }

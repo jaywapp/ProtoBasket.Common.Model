@@ -20,4 +20,16 @@
         Under,
         Over,
     }
+
+    /// <summary>
+    /// Sport Category
+    /// </summary>
+    public enum eMatchCategory
+    {
+        Invalid,
+        Soccer,
+        BasketBall,
+        BaseBall,
+        VallyBall,
+    }
 }

@@ -6,7 +6,7 @@
         /// <summary>
         /// UnderOver Value
         /// </summary>
-        public double UnderOver { get; set; } = 0;
+        public double? UnderOver { get; set; } = 0;
         #endregion
 
         #region Functions
@@ -16,10 +16,10 @@
         /// <inheritdoc/>
         public override eMatchResult GetResult()
         {
-            if (Score == null)
+            if (Score == null || !UnderOver.HasValue)
                 return eMatchResult.Invalid;
 
-            var result = Score.GetUnderOverResult(UnderOver);
+            var result = Score.GetUnderOverResult(UnderOver.Value);
 
             switch (result)
             {
