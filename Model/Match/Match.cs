@@ -50,10 +50,11 @@ namespace ProtoBasket.Common.Model
 
         /// <inheritdoc/>
         public override string ToString()
-        { 
-            return !IsStarted()
-                ? $@"No.{No} / {StartTime:yy.MM.dd} / {Contest} / {Category} / {HomeTeam} : {AwayTeam}"
-                : $@"No.{No} / {StartTime:yy.MM.dd} / {Contest} / {Category} / {HomeTeam}({Score.Home}) : {AwayTeam}({Score.Away})";
+        {
+            var home = !IsStarted() ? HomeTeam : $"{HomeTeam}({Score.Home})";
+            var away = !IsStarted() ? AwayTeam : $"{AwayTeam}({Score.Away})";
+
+            return $@"No.{No} / {StartTime:yy.MM.dd} / {Contest} / {Category} / {home} : {away}";
         }
 
         /// <summary>
