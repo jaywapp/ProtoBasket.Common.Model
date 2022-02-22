@@ -1,14 +1,27 @@
-﻿using System;
+﻿using ProtoBasket.Common.Model.Model.Interface;
+using System;
 
 namespace ProtoBasket.Common.Model
 {
-    public class Match
+    public class Match : IIdentification
     {
         #region Properties
         /// <summary>
+        /// Id
+        /// </summary>
+        public int Id { get; set; }
+        /// <summary>
+        /// Year
+        /// </summary>
+        public int Year { get; set; }
+        /// <summary>
+        /// Proto Number
+        /// </summary>
+        public int ProtoNo { get; set; }
+        /// <summary>
         /// Match Number
         /// </summary>
-        public int No { get; set; }
+        public int MatchNo { get; set; }
         /// <summary>
         /// Match Start Time
         /// </summary>
@@ -54,7 +67,7 @@ namespace ProtoBasket.Common.Model
             var home = !IsStarted() ? HomeTeam : $"{HomeTeam}({Score.Home})";
             var away = !IsStarted() ? AwayTeam : $"{AwayTeam}({Score.Away})";
 
-            return $@"No.{No} / {StartTime:yy.MM.dd} / {Contest} / {Category} / {home} : {away}";
+            return $@"No.{MatchNo} / {StartTime:yy.MM.dd} / {Contest} / {Category} / {home} : {away}";
         }
 
         /// <summary>

@@ -17,7 +17,6 @@
         public double Lose { get; set; }
         #endregion
 
-
         #region Functions
         /// <summary>
         /// Get allocation value about <paramref name="result"/>
