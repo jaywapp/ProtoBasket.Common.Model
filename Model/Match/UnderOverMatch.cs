@@ -1,6 +1,8 @@
-﻿namespace ProtoBasket.Common.Model
+﻿using ProtoBasket.Common.Model.Model.Interface;
+
+namespace ProtoBasket.Common.Model
 {
-    public class UnderOverMatch : Match
+    public class UnderOverMatch : Match, IUnderOverMatch
     {
         #region Properties
         /// <summary>

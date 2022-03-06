@@ -3,7 +3,7 @@ using System;
 
 namespace ProtoBasket.Common.Model
 {
-    public class Match : IIdentification
+    public class Match : IIdentification, IMatch
     {
         #region Properties
         /// <summary>

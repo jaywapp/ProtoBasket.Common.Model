@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Interface\IHandicapMatch.cs" />
     <Compile Include="Model\Interface\IIdentification.cs" />
+    <Compile Include="Model\Interface\IMatch.cs" />
+    <Compile Include="Model\Interface\IUnderOverMatch.cs" />
     <Compile Include="Model\Match\Allocation.cs" />
     <Compile Include="Model\Match\HandicapMatch.cs" />
     <Compile Include="Model\Match\Match.cs" />

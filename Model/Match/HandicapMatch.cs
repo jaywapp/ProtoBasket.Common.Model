@@ -1,6 +1,8 @@
-﻿namespace ProtoBasket.Common.Model
+﻿using ProtoBasket.Common.Model.Model.Interface;
+
+namespace ProtoBasket.Common.Model
 {
-    public class HandicapMatch : Match
+    public class HandicapMatch : Match, IHandicapMatch
     {
         #region Properties
         /// <summary>
