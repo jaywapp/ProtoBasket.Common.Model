@@ -12,5 +12,9 @@ namespace ProtoBasket.Common.Model
         /// <inheritdoc/>
         public double Lose { get; set; }
         #endregion
+
+        #region Functions
+        public override string ToString() => $"W : {Win}, D : {Draw}, L : {Lose}";
+        #endregion
     }
 }

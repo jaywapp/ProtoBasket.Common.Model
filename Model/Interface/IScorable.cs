@@ -1,15 +1,15 @@
 ﻿namespace ProtoBasket.Common.Model.Model.Interface
 {
-    public interface IScore
+    public interface IScorable
     {
         /// <summary>
         /// Home Team Score
         /// </summary>
-        double Home { get; set; }
+        double HomeScore { get; set; }
         /// <summary>
         /// Away Team Score
         /// </summary>
-        double Away { get; set; }
+        double AwayScore { get; set; }
     }
 
     public static class ScoreExt
@@ -18,11 +18,11 @@
         /// Get match result
         /// </summary>
         /// <returns></returns>
-        public static eMatchResult GetResult(this IScore score)
+        public static eMatchResult GetResult(this IScorable score)
         {
-            if (score.Home > score.Away)
+            if (score.HomeScore > score.AwayScore)
                 return eMatchResult.Win;
-            else if (score.Home < score.Away)
+            else if (score.HomeScore < score.AwayScore)
                 return eMatchResult.Lose;
 
             return eMatchResult.Draw;
@@ -33,9 +33,9 @@
         /// </summary>
         /// <param name="value">standard value</param>
         /// <returns></returns>
-        public static eUnderOverMatchResult GetUnderOverResult(this IScore score, double value)
+        public static eUnderOverMatchResult GetUnderOverResult(this IScorable score, double value)
         {
-            return score.Home + score.Away > value
+            return score.HomeScore + score.AwayScore > value
                 ? eUnderOverMatchResult.Over
                 : eUnderOverMatchResult.Under;
         }
@@ -45,14 +45,14 @@
         /// </summary>
         /// <param name="value">handicap value</param>
         /// <returns></returns>
-        public static eMatchResult GetHandicapResult(this IScore score, double value)
+        public static eMatchResult GetHandicapResult(this IScorable score, double value)
         {
             // applying handicap value
-            var home = score.Home + value;
+            var home = score.HomeScore + value;
 
-            if (home > score.Away)
+            if (home > score.AwayScore)
                 return eMatchResult.Win;
-            else if (home < score.Away)
+            else if (home < score.AwayScore)
                 return eMatchResult.Lose;
 
             return eMatchResult.Draw;

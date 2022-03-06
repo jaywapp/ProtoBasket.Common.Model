@@ -1,50 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProtoBasket.Common.Model.Model.Interface
+﻿namespace ProtoBasket.Common.Model.Model.Interface
 {
     public interface IMatch
     {
         /// <summary>
         /// Id
         /// </summary>
-        int Id { get; set; }
+        int Id { get; }
         /// <summary>
         /// Year
         /// </summary>
-        int Year { get; set; }
+        int Year { get; }
         /// <summary>
         /// Proto Number
         /// </summary>
-        int ProtoNo { get; set; }
+        int ProtoNo { get; }
         /// <summary>
         /// Match Number
         /// </summary>
-        int MatchNo { get; set; }
+        int MatchNo { get; }
         /// <summary>
-        /// Match Start Time
+        /// Sport Game
         /// </summary>
-        DateTime StartTime { get; set; }
+        IGame Game { get; }
         /// <summary>
-        /// Contest
-        /// ex) League, Tournament
+        /// Allocation
         /// </summary>
-        string Contest { get; set; }
-        /// <summary>
-        /// Category
-        /// ex) Soccer, Baseball
-        /// </summary>
-        eMatchCategory Category { get; set; }
-        /// <summary>
-        /// Home Team Name
-        /// </summary>
-        string HomeTeam { get; set; }
-        /// <summary>
-        /// Away Team Name
-        /// </summary>
-        string AwayTeam { get; set; }
+        IAllocation Allocation { get; }
     }
 }

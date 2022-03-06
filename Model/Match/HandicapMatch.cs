@@ -16,15 +16,6 @@ namespace ProtoBasket.Common.Model
             var prefix = Handicap >= 0 ? "+" : "";
             return $"{base.ToString()} ({prefix}{Handicap})";
         }
-
-        /// <inheritdoc/>
-        public override eMatchResult GetResult()
-        {
-            if (Score == null || !Handicap.HasValue)
-                return eMatchResult.Invalid;
-
-            return Score.GetHandicapResult(Handicap.Value);
-        }
         #endregion
     }
 }
