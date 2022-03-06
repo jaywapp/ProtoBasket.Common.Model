@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ProtoBasket.Common.Model.Model.Interface
 {
@@ -42,13 +46,5 @@ namespace ProtoBasket.Common.Model.Model.Interface
         /// Away Team Name
         /// </summary>
         string AwayTeam { get; set; }
-        /// <summary>
-        /// Match Score
-        /// </summary>
-        Score Score { get; set; }
-        /// <summary>
-        /// Match Allocation
-        /// </summary>
-        Allocation Allocation { get; set; }
     }
 }

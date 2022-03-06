@@ -6,51 +6,27 @@ namespace ProtoBasket.Common.Model
     public class Match : IIdentification, IMatch
     {
         #region Properties
-        /// <summary>
-        /// Id
-        /// </summary>
+        /// <inheritdoc />
         public int Id { get; set; }
-        /// <summary>
-        /// Year
-        /// </summary>
+        /// <inheritdoc />
         public int Year { get; set; }
-        /// <summary>
-        /// Proto Number
-        /// </summary>
+        /// <inheritdoc />
         public int ProtoNo { get; set; }
-        /// <summary>
-        /// Match Number
-        /// </summary>
+        /// <inheritdoc />
         public int MatchNo { get; set; }
-        /// <summary>
-        /// Match Start Time
-        /// </summary>
+        /// <inheritdoc />
         public DateTime StartTime { get; set; }
-        /// <summary>
-        /// Contest
-        /// ex) League, Tournament
-        /// </summary>
+        /// <inheritdoc />
         public string Contest { get; set; }
-        /// <summary>
-        /// Category
-        /// ex) Soccer, Baseball
-        /// </summary>
+        /// <inheritdoc />
         public eMatchCategory Category { get; set; }
-        /// <summary>
-        /// Home Team Name
-        /// </summary>
+        /// <inheritdoc />
         public string HomeTeam { get; set; }
-        /// <summary>
-        /// Away Team Name
-        /// </summary>
+        /// <inheritdoc />
         public string AwayTeam { get; set; }
-        /// <summary>
-        /// Match Score
-        /// </summary>
+        /// <inheritdoc />
         public Score Score { get; set; }
-        /// <summary>
-        /// Match Allocation
-        /// </summary>
+        /// <inheritdoc />
         public Allocation Allocation { get; set; }
         #endregion
 

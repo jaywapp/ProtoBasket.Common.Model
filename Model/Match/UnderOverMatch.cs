@@ -5,9 +5,7 @@ namespace ProtoBasket.Common.Model
     public class UnderOverMatch : Match, IUnderOverMatch
     {
         #region Properties
-        /// <summary>
-        /// UnderOver Value
-        /// </summary>
+        /// <inheritdoc />
         public double? UnderOver { get; set; } = 0;
         #endregion
 

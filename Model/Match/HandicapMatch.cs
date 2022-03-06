@@ -5,9 +5,7 @@ namespace ProtoBasket.Common.Model
     public class HandicapMatch : Match, IHandicapMatch
     {
         #region Properties
-        /// <summary>
-        /// Handicap Value
-        /// </summary>
+        /// <inheritdoc />
         public double? Handicap { get; set; } = 0;
         #endregion
 
